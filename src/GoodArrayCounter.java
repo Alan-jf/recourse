@@ -20,7 +20,7 @@ public class GoodArrayCounter {
 
         long choose = fact[n - 1] * invFact[k] % MOD * invFact[n - 1 - k] % MOD;
         long pow = pow(m - 1, n - k - 1);
-        return choose * m % MOD * pow % MOD;
+        return (int) ((choose * m % MOD) * pow % MOD);;
     }
 
     private static long pow(long base, long exp) {
